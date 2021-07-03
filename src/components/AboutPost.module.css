@@ -1,0 +1,12 @@
+.textLarge,
+.textBody {
+  color: white;
+}
+
+.textLarge {
+  font-size: 24px;
+}
+
+.resumeLink {
+  color: red;
+}

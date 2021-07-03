@@ -2,19 +2,24 @@ import React from "react";
 import LogoReturnHome from "../components/LogoReturnHome";
 
 import ProfileImage from "../components/ProfileImage";
-import classes from "./About.module.css";
+import AboutPost from "../components/AboutPost";
+import styles from "./About.module.css";
 
 const About = (props) => {
   return (
     <div>
-      <div className={classes.header_row}>
+      <div className={styles.header_row}>
         <LogoReturnHome />
         <header>
-          <h1 className={classes.header}>I design & build digital produts</h1>
+          <h1 className={styles.header}>I design & build digital produts</h1>
         </header>
       </div>
-      <div class={classes.profile_image_container}>
+      <div class={styles.profile_image_container}>
         <ProfileImage />
+      </div>
+
+      <div id={styles.about_container}>
+        <AboutPost />
       </div>
     </div>
   );

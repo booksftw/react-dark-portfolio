@@ -1,0 +1,33 @@
+.header_row {
+  height: 100vh;
+}
+
+.header {
+  color: white;
+  font-size: 90px;
+  width: 850px;
+  position: relative;
+  left: 45%;
+  top: 360px;
+  transform: translate(-50%, -50%);
+}
+
+.contact_container {
+  color: white;
+  position: relative;
+  top: 12.5rem;
+  left: 23%;
+  font-size: 35px;
+  width: 50%;
+  padding-bottom: 250px;
+}
+
+.contact_container p {
+  font-size: 15px;
+}
+
+.contact_container span {
+  display: block;
+  color: red;
+  margin-bottom: 10px;
+}
