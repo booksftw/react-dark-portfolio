@@ -1,0 +1,19 @@
+.header {
+  color: white;
+  font-size: 90px;
+  width: 650px;
+  position: absolute;
+  left: 45%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.header_row {
+  height: 100vh;
+}
+
+.profile_image_container img {
+  width: 850px;
+  position: absolute;
+  right: 0px;
+}

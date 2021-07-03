@@ -1,0 +1,7 @@
+.click_anywhere {
+  color: white;
+  position: fixed;
+  top: 78%;
+  left: 50%;
+  cursor: pointer;
+}

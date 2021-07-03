@@ -1,9 +1,8 @@
 .welcomeText {
-  color: white;
-  position: absolute;
+  position: fixed;
   font-size: 6rem;
   top: 6.25rem;
-  left: 10.5rem;
+  left: 18.5rem;
   cursor: pointer;
 }
 
@@ -11,9 +10,15 @@
   display: block;
 }
 
+.welcomeTextOne {
+  color: white;
+  text-decoration: none;
+}
+
 .welcomeTextTwo,
 .welcomeTextThree {
   color: red;
+  text-decoration: none;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -36,6 +41,6 @@
 @media only screen and (min-width: 1224px) {
   /* Styles */
   .welcomeText {
-    left: 40%;
+    left: 27%;
   }
 }

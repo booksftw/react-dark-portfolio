@@ -1,93 +1,104 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
 import classes from "./WelcomeText.module.css";
 
-const WelcomeText = (props) => {
-  const defaultWelcomeTextOneText = "Hello.";
-  const altWelcomeTextOne = "About";
+class WelcomeText extends React.Component {
+  defaultWelcomeTextOneText = "Hello.";
+  altWelcomeTextOne = "About";
 
-  const defaultWelcomeTextTwoText = "I am";
-  const altWelcomeTextTwo = "Work";
+  defaultWelcomeTextTwoText = "I am";
+  altWelcomeTextTwo = "Work";
 
-  const defaultWelcomeTextThreeText = "Nick";
-  const altWelcomeTextThree = "Contact";
+  defaultWelcomeTextThreeText = "Nick";
+  altWelcomeTextThree = "Contact";
 
-  const [welcomeTextOne, setWelcomeTextOne] = useState(
-    defaultWelcomeTextOneText
-  );
+  constructor(props) {
+    super(props);
+    this.state = {
+      welcomeTextOne: this.defaultWelcomeTextOneText,
+      welcomeTextTwo: this.defaultWelcomeTextTwoText,
+      welcomeTextThree: this.defaultWelcomeTextThreeText,
+      isShowingWelcome: true,
+    };
+  }
 
-  const [welcomeTextTwo, setWelcomeTextTwo] = useState(
-    defaultWelcomeTextTwoText
-  );
-
-  const [welcomeTextThree, setWelcomeTextThree] = useState(
-    defaultWelcomeTextThreeText
-  );
-
-  const [isShowingWelcome, setIsShowingWelcome] = useState(true);
-
-  const welcomeOneMouseOverHandler = () => {
-    setWelcomeTextOne(altWelcomeTextOne);
+  welcomeOneMouseOverHandler = () => {
+    console.log("FIRE");
+    this.setState({ welcomeTextOne: this.altWelcomeTextOne });
+    // this.setWelcomeTextOne(this.altWelcomeTextOne);
+    // this.setState({ welcomeTextOne: this.altWelcomeTextOne });
   };
 
-  const welcomeOneMouseLeaveHandler = () => {
-    setWelcomeTextOne(defaultWelcomeTextOneText);
+  welcomeOneMouseLeaveHandler = () => {
+    this.setState({ welcomeTextOne: this.defaultWelcomeTextOneText });
+    // this.setWelcomeTextOne(this.defaultWelcomeTextOneText);
   };
 
-  const welcomeTwoMouseOverHandler = () => {
-    setWelcomeTextTwo(altWelcomeTextTwo);
+  welcomeTwoMouseOverHandler = () => {
+    this.setState({ welcomeTextTwo: this.altWelcomeTextTwo });
   };
 
-  const welcomeTwoMouseLeaveHandler = () => {
-    setWelcomeTextTwo(defaultWelcomeTextTwoText);
+  welcomeTwoMouseLeaveHandler = () => {
+    this.setState({ welcomeTextTwo: this.defaultWelcomeTextTwoText });
   };
 
-  const welcomeThreeMouseOverHandler = () => {
-    setWelcomeTextThree(altWelcomeTextThree);
+  welcomeThreeMouseOverHandler = () => {
+    this.setState({ welcomeTextThree: this.altWelcomeTextThree });
   };
 
-  const welcomeThreeMouseLeaveHandler = () => {
-    setWelcomeTextThree(defaultWelcomeTextThreeText);
+  welcomeThreeMouseLeaveHandler = () => {
+    this.setState({ welcomeTextThree: this.defaultWelcomeTextThreeText });
   };
 
-  const handleWindowClickHandler = () => {
-    setIsShowingWelcome((isShowingWelcome) => {
-      // This comment is a bug fix to make this work for some reason;
-      return !isShowingWelcome;
-    });
+  handleWindowClickHandler = () => {
+    this.setState({ isShowingWelcome: !this.state.isShowingWelcome });
   };
 
-  useEffect(() => {
-    console.log("effect");
-    window.addEventListener("click", handleWindowClickHandler);
-  }, []);
+  componentDidMount() {
+    window.addEventListener("click", this.handleWindowClickHandler);
+  }
 
-  return (
-    <div>
-      <h1 className={classes.welcomeText}>
-        <span
-          className={classes.welcomeTextOne}
-          onMouseOver={welcomeOneMouseOverHandler}
-          onMouseLeave={welcomeOneMouseLeaveHandler}
-        >
-          {isShowingWelcome ? welcomeTextOne : altWelcomeTextOne}
-        </span>
-        <span
-          onMouseOver={welcomeTwoMouseOverHandler}
-          onMouseLeave={welcomeTwoMouseLeaveHandler}
-          className={classes.welcomeTextTwo}
-        >
-          {isShowingWelcome ? welcomeTextTwo : altWelcomeTextTwo}
-        </span>
-        <span
-          onMouseOver={welcomeThreeMouseOverHandler}
-          onMouseLeave={welcomeThreeMouseLeaveHandler}
-          className={classes.welcomeTextThree}
-        >
-          {isShowingWelcome ? welcomeTextThree : altWelcomeTextThree}
-        </span>
-      </h1>
-    </div>
-  );
-};
+  render() {
+    return (
+      <div>
+        <h1 className={classes.welcomeText}>
+          <Link class={classes.welcomeTextOne} to="/about">
+            <span
+              onMouseOver={this.welcomeOneMouseOverHandler}
+              onMouseLeave={this.welcomeOneMouseLeaveHandler}
+            >
+              {this.state.isShowingWelcome
+                ? this.state.welcomeTextOne
+                : this.altWelcomeTextOne}
+            </span>
+          </Link>
+
+          <Link class={classes.welcomeTextTwo} to="/work">
+            <span
+              onMouseOver={this.welcomeTwoMouseOverHandler}
+              onMouseLeave={this.welcomeTwoMouseLeaveHandler}
+            >
+              {this.state.isShowingWelcome
+                ? this.state.welcomeTextTwo
+                : this.altWelcomeTextTwo}
+            </span>
+          </Link>
+
+          <Link className={classes.welcomeTextThree} to="/contact">
+            <span
+              onMouseOver={this.welcomeThreeMouseOverHandler}
+              onMouseLeave={this.welcomeThreeMouseLeaveHandler}
+            >
+              {this.state.isShowingWelcome
+                ? this.state.welcomeTextThree
+                : this.altWelcomeTextThree}
+            </span>
+          </Link>
+        </h1>
+      </div>
+    );
+  }
+}
 
 export default WelcomeText;
