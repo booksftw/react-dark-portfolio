@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 import classes from "./WelcomeText.module.css";
@@ -48,12 +48,18 @@ class WelcomeText extends React.Component {
   };
 
   handleWindowClickHandler = () => {
+    // This line of code is responsible for switching it two alt descriptions on return from route
     this.setState({ isShowingWelcome: !this.state.isShowingWelcome });
   };
 
   componentDidMount() {
     window.addEventListener("click", this.handleWindowClickHandler);
     console.log("component did mount");
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("click", this.handleWindowClickHandler);
+    this.setState({ welcomeTextOne: "yo" });
   }
 
   render() {
