@@ -1,7 +1,14 @@
 .welcomeImage {
   position: fixed;
   right: -9.375rem;
+  top: 0rem;
   display: block;
+}
+
+.particles {
+  position: fixed;
+  right: -9.375rem;
+  height: 800px;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
