@@ -27,6 +27,8 @@
   .welcomeText {
     font-size: 3rem;
     left: 5rem;
+    top: 28%;
+    z-index: 100;
   }
 }
 
@@ -34,6 +36,8 @@
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   /* Styles */
   .welcomeText {
+    left: 7rem;
+    top: 25%;
   }
 }
 

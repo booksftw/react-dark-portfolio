@@ -13,26 +13,27 @@ const Contact = () => {
       <div className={styles.contact_container}>
         <h3>Contact</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam
-          blanditiis, quia quasi atque cupiditate dolores accusantium! Adipisci
-          enim, recusandae exercitationem tempore laudantium quae maiores nobis
-          aut molestiae optio quam. <br />
+          I'm seeking out opportunities to learn and grow, and help you make an
+          impact! I want to bring my design experience to the table and help you
+          build beautiful user interfaces in React or Angular. <br />
           <br />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam
-          blanditiis, quia quasi atque cupiditate dolores accusantium! Adipisci
-          enim, recusandae exercitationem tempore laudantium quae maiores nobis
-          aut molestiae optio quam. <br />
+          I look forward to hearing from you and helping you acheive your dreams
+          by building building well engineered beautiful apps that changes the
+          world.
           <br />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo numquam
-          blanditiis, quia quasi atque cupiditate dolores accusantium! Adipisci
-          enim, recusandae exercitationem tempore laudantium quae maiores nobis
-          aut molestiae optio quam. <br />
           <br />
           Feel free to contact me through any platform below:
           <br />
           <br />
-          <span>nick@email.com</span>
-          <span>nick@email.com</span>
+          <span>nicholas.zachary@outlook.com</span>
+          <span>
+            <a href="https://www.youtube.com/channel/UCtzQTLivB84hXDR22gQWQJA">
+              YouTube
+            </a>
+          </span>
+          <span>
+            <a href="https://resume.creddle.io/resume/6qd2rps47cc">Resume</a>
+          </span>
         </p>
       </div>
     </div>

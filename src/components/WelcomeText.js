@@ -24,15 +24,11 @@ class WelcomeText extends React.Component {
   }
 
   welcomeOneMouseOverHandler = () => {
-    console.log("FIRE");
     this.setState({ welcomeTextOne: this.altWelcomeTextOne });
-    // this.setWelcomeTextOne(this.altWelcomeTextOne);
-    // this.setState({ welcomeTextOne: this.altWelcomeTextOne });
   };
 
   welcomeOneMouseLeaveHandler = () => {
     this.setState({ welcomeTextOne: this.defaultWelcomeTextOneText });
-    // this.setWelcomeTextOne(this.defaultWelcomeTextOneText);
   };
 
   welcomeTwoMouseOverHandler = () => {
@@ -57,13 +53,14 @@ class WelcomeText extends React.Component {
 
   componentDidMount() {
     window.addEventListener("click", this.handleWindowClickHandler);
+    console.log("component did mount");
   }
 
   render() {
     return (
       <div>
         <h1 className={classes.welcomeText}>
-          <Link class={classes.welcomeTextOne} to="/about">
+          <Link className={classes.welcomeTextOne} to="/about">
             <span
               onMouseOver={this.welcomeOneMouseOverHandler}
               onMouseLeave={this.welcomeOneMouseLeaveHandler}
@@ -74,7 +71,7 @@ class WelcomeText extends React.Component {
             </span>
           </Link>
 
-          <Link class={classes.welcomeTextTwo} to="/work">
+          <Link className={classes.welcomeTextTwo} to="/work">
             <span
               onMouseOver={this.welcomeTwoMouseOverHandler}
               onMouseLeave={this.welcomeTwoMouseLeaveHandler}

@@ -1,31 +1,6 @@
-.textLarge,
-.textBody {
-  color: white;
-}
-
-.textLarge {
-  font-size: 24px;
-}
-
-.resumeLink {
-  color: red;
-}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   /* Styles */
-  .textLarge {
-    font-size: 24px;
-  }
-  .textBody {
-    font-size: 15px;
-  }
-
-  .container {
-    margin-top: 0px;
-    right: 100px;
-    position: relative;
-    width: 80%;
-  }
 }
 
 /* iPads (portrait and landscape) ----------- */

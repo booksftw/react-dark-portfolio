@@ -26,8 +26,36 @@
   font-size: 15px;
 }
 
-.contact_container span {
+.contact_container span,
+.contact_container a {
   display: block;
   color: red;
   margin-bottom: 10px;
+  text-decoration: none;
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  .header {
+    left: 45%;
+    font-size: 45px;
+    width: 255px;
+  }
+  /* 
+  #about_container {
+    width: 100%;
+    left: 90%;
+    margin-top: 600px;
+  } */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
 }

@@ -4,4 +4,26 @@
   top: 78%;
   left: 50%;
   cursor: pointer;
+  z-index: 1000;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Styles */
+  .click_anywhere {
+    transform: translate(-50, -50);
+    left: 35%;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Styles */
+  .click_anywhere {
+    left: 45%;
+  }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  /* Styles */
 }

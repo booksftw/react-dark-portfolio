@@ -14,7 +14,7 @@ const About = (props) => {
           <h1 className={styles.header}>I design & build digital produts</h1>
         </header>
       </div>
-      <div class={styles.profile_image_container}>
+      <div className={styles.profile_image_container}>
         <ProfileImage />
       </div>
 
